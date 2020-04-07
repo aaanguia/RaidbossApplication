@@ -1,0 +1,35 @@
+
+apply plugin: 'application'
+apply plugin: 'jacoco'
+mainClassName = "src/main/java/designPattern1/Main.java"
+compileJava.options.encoding = 'UTF-8'
+
+// Repositories and dependencies for code go here
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    compile "junit:junit:4.12"
+}
+
+///////////////////////////////////////////////////////////////////////
+// Configure Checkstyle
+/////////////////////////////////////////////////////////////////////
+apply plugin: 'checkstyle'
+checkstyle {
+    // Keep checkstyle a little quieter
+    ignoreFailures = true
+    showViolations = false
+}
+tasks.withType(Checkstyle) {
+    reports {
+        html.enabled = true
+        xml.enabled = false
+    }
+}
+checkstyle {
+    toolVersion = "8.3"
+}

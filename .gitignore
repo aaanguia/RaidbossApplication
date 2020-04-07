@@ -1,0 +1,8 @@
+# Mac DS File
+.DS_Store
+
+# intellij project folder
+.idea/
+
+### Gradle ###
+.gradle/
