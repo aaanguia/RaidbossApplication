@@ -1,8 +1,6 @@
-
 plugins {
     id "com.github.spotbugs" version "3.0.0"
 }
-
 apply plugin: 'application'
 apply plugin: 'jacoco'
 group 'org.example'
@@ -45,5 +43,8 @@ tasks.withType(com.github.spotbugs.SpotBugsTask) {
     reports {
         xml.enabled = false
         html.enabled = true
+    }
+    spotbugs {
+        ignoreFailures = true
     }
 }
