@@ -1,4 +1,4 @@
 package contentCreation.Villians;
 
-public class TrialVillian {
+public class TrialVillianDecorator {
 }

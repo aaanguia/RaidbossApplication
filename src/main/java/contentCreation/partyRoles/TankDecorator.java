@@ -1,4 +1,4 @@
 package contentCreation.partyRoles;
 
-public class Healer {
+public class TankDecorator {
 }

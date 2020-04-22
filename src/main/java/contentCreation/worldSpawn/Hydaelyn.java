@@ -1,19 +1,23 @@
 package contentCreation.worldSpawn;
 
 public class Hydaelyn {
-    private String continent;
+    private String realm;
     private String cityState;
 
-    public Hydaelyn(String continent, String cityState){
-        this.continent = continent;
+    public Hydaelyn(String realm, String cityState){
+        this.realm = realm;
         this.cityState = cityState;
     }
 
     public String getContinent() {
-        return continent;
+        return realm;
     }
 
     public String getCityState() {
         return cityState;
+    }
+
+    public String toString(){
+        return  getCityState() +", " + getContinent();
     }
 }
