@@ -1,8 +1,10 @@
 package main.java;
 import contentCreation.Character.HydaelynInhabitantImpl;
 import contentCreation.Character.Character;
+import contentCreation.Villians.Tier1Villian;
 import contentCreation.partyRoles.DpsDecorator;
 import contentCreation.partyRoles.HealerDecorator;
+import contentCreation.partyRoles.Party;
 import contentCreation.partyRoles.TankDecorator;
 import gui.GameWindow;
 
@@ -26,32 +28,35 @@ public class Main {
         Character Sulking = new DpsDecorator(new  HydaelynInhabitantImpl("Sulking Lance", "Hell's Gaurd Roegadyn",
                 "Eorzea", "Gridania", "Halone"));
 
+        Party heroParty = new Party(WarriorOfLight, Yshtola, Mintella, Luna, Sulking);
 
-        // Clone Bosses (4 Different Phases of the same boss that will get stronger each time / different moves)
+
+        // Clone Bosses (5 Different Phases of the same boss that will get stronger each time / different moves)
         HydaelynInhabitantImpl Susano = new HydaelynInhabitantImpl("Susano", "Primal",
                 "Othard", "Hingashi", "Ancient Kojin");
 
+        Character SusanoTier1 = new Tier1Villian(Susano);
+        Character SusanoTier2 = new Tier1Villian(Susano);
+        Character SusanoTier3 = new Tier1Villian(Susano);
+        Character SusanoTier4 = new Tier1Villian(Susano);
+        Character SusanoTier5 = new Tier1Villian(Susano);
+
+        Party villianParty = new Party(SusanoTier1, SusanoTier2, SusanoTier3, SusanoTier4, SusanoTier5);
 
         /**
          *         implement random timer that may result in an attack
          *         Implement one Trial that gets stronger over and over
          */
 
-
-
         GameWindow test = new GameWindow();
 
-        // Testing printing of of users to gui
-        test.setGameLog(WarriorOfLight.getName());
-        test.setGameLog(Mintella.toString());
-        test.setGameLog(Luna.toString());
-        test.setGameLog(Sulking.toString());
-        test.setGameLog(Yshtola.toString());
-        test.setGameLog(Susano.toString());
-
-
-
-
+        // Adding Party Members to Log
+        test.appendToPartyLog(WarriorOfLight);
+        test.appendToPartyLog(Mintella);
+        test.appendToPartyLog(Luna);
+        test.appendToPartyLog(Sulking);
+        test.appendToPartyLog(Yshtola);
+        test.setGameLog(SusanoTier1.toString());
 
 
     }

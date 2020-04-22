@@ -8,6 +8,7 @@ public class DpsDecorator extends CharacterDecorator {
     public DpsDecorator(Character character) {
         super(character);
         super.setRole("DPS");
+        super.setHealthPoints(40);
     }
 
     public int dashAttack(){

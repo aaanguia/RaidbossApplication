@@ -21,7 +21,7 @@ public class HydaelynInhabitantImpl implements Character{
         role = "";
         isAlive = true;
         currentLvl = 1;
-        healthPoints = 50;
+        healthPoints = 20;
         experiencePoints = 0;
     }
 

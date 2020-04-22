@@ -8,6 +8,7 @@ public class HealerDecorator extends CharacterDecorator {
     public HealerDecorator(Character character) {
         super(character);
         super.setRole("Healer");
+        super.setHealthPoints(35);
     }
 
     public int partyHeal(){

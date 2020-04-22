@@ -8,6 +8,7 @@ public class TankDecorator extends CharacterDecorator {
 
     public TankDecorator(Character character) {
         super(character);
+        super.setHealthPoints(75);
         super.setRole("Tank");
         grit = true;
     }
