@@ -1,4 +1,4 @@
 package contentCreation.Villians;
 
-public class TrialVillianDecorator {
+public class Tier5Villian {
 }
