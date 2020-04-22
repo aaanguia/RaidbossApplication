@@ -1,13 +1,14 @@
 package contentCreation.partyRoles;
 
-import contentCreation.Character.HydaelynInhabitantImpl;
-import contentCreation.Character.RoleDecorator;
+import contentCreation.Character.CharacterDecorator;
+import contentCreation.Character.Character;
 
-public class TankDecorator extends RoleDecorator {
+public class TankDecorator extends CharacterDecorator {
     protected boolean grit;  // Tank ability to soak damage for party.
 
-    public TankDecorator(HydaelynInhabitantImpl Character) {
-        super(Character);
+    public TankDecorator(Character character) {
+        super(character);
+        super.setRole("Tank");
         grit = true;
     }
 

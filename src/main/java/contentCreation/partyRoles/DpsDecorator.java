@@ -1,12 +1,13 @@
 package contentCreation.partyRoles;
 
-import contentCreation.Character.HydaelynInhabitantImpl;
-import contentCreation.Character.RoleDecorator;
+import contentCreation.Character.CharacterDecorator;
+import contentCreation.Character.Character;
 
-public class DpsDecorator extends RoleDecorator {
+public class DpsDecorator extends CharacterDecorator {
 
-    public DpsDecorator(HydaelynInhabitantImpl Character) {
-        super(Character);
+    public DpsDecorator(Character character) {
+        super(character);
+        super.setRole("DPS");
     }
 
     public int dashAttack(){

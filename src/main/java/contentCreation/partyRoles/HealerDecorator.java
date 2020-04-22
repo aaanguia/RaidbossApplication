@@ -1,12 +1,13 @@
 package contentCreation.partyRoles;
 
-import contentCreation.Character.HydaelynInhabitantImpl;
-import contentCreation.Character.RoleDecorator;
+import contentCreation.Character.CharacterDecorator;
+import contentCreation.Character.Character;
 
-public class HealerDecorator extends RoleDecorator {
+public class HealerDecorator extends CharacterDecorator {
 
-    public HealerDecorator(HydaelynInhabitantImpl Character) {
-        super(Character);
+    public HealerDecorator(Character character) {
+        super(character);
+        super.setRole("Healer");
     }
 
     public int partyHeal(){
