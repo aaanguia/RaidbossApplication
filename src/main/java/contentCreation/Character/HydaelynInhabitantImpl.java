@@ -2,6 +2,9 @@ package contentCreation.Character;
 
 import contentCreation.worldSpawn.Hydaelyn;
 
+/**
+ * Concrete builder
+ */
 public class HydaelynInhabitantImpl implements Character{
     private final String name;
     private final String race;

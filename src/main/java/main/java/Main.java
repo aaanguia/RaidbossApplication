@@ -1,6 +1,7 @@
 package main.java;
-import contentCreation.Character.HydaelynInhabitantImpl;
+
 import contentCreation.Character.Character;
+import contentCreation.Character.HydaelynInhabitantImpl;
 import contentCreation.Villians.*;
 import contentCreation.partyRoles.DpsDecorator;
 import contentCreation.partyRoles.HealerDecorator;

@@ -1,7 +1,7 @@
 package contentCreation.partyRoles;
 
-import contentCreation.Character.CharacterDecorator;
 import contentCreation.Character.Character;
+import contentCreation.Character.CharacterDecorator;
 
 
 public class HealerDecorator extends CharacterDecorator {
@@ -13,12 +13,12 @@ public class HealerDecorator extends CharacterDecorator {
     }
     @Override
     public int ability1(){
-        return 7 + (int)(.35 * getCurrentLvl() + 1);
+        return 10 + (int)(.35 * getCurrentLvl() + 1);
     }
 
     @Override
     public int ability2(){
-        return 3 + (int)(.15 * getCurrentLvl() + 1) ;
+        return 6 + (int)(.15 * getCurrentLvl() + 1) ;
     }
 
     @Override

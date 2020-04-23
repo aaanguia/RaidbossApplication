@@ -23,6 +23,7 @@ public class Tier4Villian extends CharacterDecorator {
     public int ability1() {
         return -65;
     }
+
     @Override
     public int ability2() {
         return -15 - (int) (.25 * (getCurrentLvl() + getTeirLvL()));

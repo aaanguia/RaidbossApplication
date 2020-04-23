@@ -1,7 +1,7 @@
 package contentCreation.partyRoles;
 
-import contentCreation.Character.CharacterDecorator;
 import contentCreation.Character.Character;
+import contentCreation.Character.CharacterDecorator;
 
 public class TankDecorator extends CharacterDecorator {
     protected boolean grit;  // Tank ability to soak damage for party.

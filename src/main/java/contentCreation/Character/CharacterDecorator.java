@@ -1,5 +1,8 @@
 package contentCreation.Character;
 
+/**
+ * abstract decorator
+ */
 public abstract class CharacterDecorator implements Character{
     protected Character character;
 
@@ -34,7 +37,7 @@ public abstract class CharacterDecorator implements Character{
 
     @Override
     public String toString(){
-         return character.toString();
+        return character.toString();
     }
 
     @Override
