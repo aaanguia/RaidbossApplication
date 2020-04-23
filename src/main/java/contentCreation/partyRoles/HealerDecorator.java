@@ -3,6 +3,7 @@ package contentCreation.partyRoles;
 import contentCreation.Character.CharacterDecorator;
 import contentCreation.Character.Character;
 
+
 public class HealerDecorator extends CharacterDecorator {
 
     public HealerDecorator(Character character) {
@@ -10,15 +11,17 @@ public class HealerDecorator extends CharacterDecorator {
         super.setRole("Healer");
         super.setHealthPoints(35);
     }
-
-    public int partyHeal(){
+    @Override
+    public int ability1(){
         return 7 + (int)(.35 * getCurrentLvl() + 1);
     }
 
-    public int healAttack(){
+    @Override
+    public int ability2(){
         return 3 + (int)(.15 * getCurrentLvl() + 1) ;
     }
 
+    @Override
     public void rest(){
         setHealthPoints(getHealthPoints()+ 10 + (int)(.05 * getCurrentLvl() + 1));
     }

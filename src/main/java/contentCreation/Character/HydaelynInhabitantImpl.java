@@ -78,6 +78,14 @@ public class HydaelynInhabitantImpl implements Character{
     @Override
     public void setExperiencePoints(int experiencePoints) {
         this.experiencePoints = experiencePoints;
+        if(experiencePoints >= 100){
+            setCurrentLvl(getCurrentLvl()+1);
+            setExperiencePoints(getExperiencePoints() % 100);
+        }
+    }
+
+    public void setCurrentLvl(int currentLvl) {
+        this.currentLvl = currentLvl;
     }
 
     @Override
@@ -104,6 +112,21 @@ public class HydaelynInhabitantImpl implements Character{
             currentLvl++;
             setExperiencePoints(getExperiencePoints()%30);
         }
+    }
+
+    @Override
+    public int ability1() {
+        return 0;
+    }
+
+    @Override
+    public int ability2() {
+        return 0;
+    }
+
+    @Override
+    public void rest() {
+
     }
 
 }

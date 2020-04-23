@@ -25,10 +25,17 @@ public class TankDecorator extends CharacterDecorator {
         setGrit(!isGrit());
     }
 
-    public int slash(){
-        return 7 + (int) (.35 * getCurrentLvl() +2);
+    @Override
+    public int ability1(){
+        return 4 + (int) (.35 * getCurrentLvl() +2);
     }
 
+    @Override
+    public int ability2(){
+        return ability1();
+    }
+
+    @Override
     public void rest(){
         setHealthPoints(getHealthPoints()+ 9 + (int) (0.15 * getCurrentLvl() + 1));
     }

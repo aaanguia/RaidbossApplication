@@ -12,6 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import contentCreation.Character.Character;
+import main.java.Main;
+import observerPattern.BattleCode;
 
 public class GameWindow {
     private static Container con;
@@ -79,7 +81,7 @@ public class GameWindow {
         optionOneButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String message = gameLog.getText();
+                BattleCode.trial1Fight(Main.heroParty, Main.SusanoTier1);
             }
         });
 
@@ -88,7 +90,7 @@ public class GameWindow {
         optionTwoButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("test");
+                BattleCode.trial1Fight(Main.heroParty, Main.SusanoTier2);
             }
         });
         optionThreeButton = new JButton("Trial 3");
@@ -96,7 +98,7 @@ public class GameWindow {
         optionThreeButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("test");
+                BattleCode.trial1Fight(Main.heroParty, Main.SusanoTier3);
             }
         });
 
@@ -105,7 +107,8 @@ public class GameWindow {
         optionFourButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("test");
+                System.out.println(Main.SusanoTier4.getHealthPoints());
+                BattleCode.trial1Fight(Main.heroParty, Main.SusanoTier4);
             }
         });
         optionFiveButton = new JButton("Trial 5");
@@ -113,7 +116,7 @@ public class GameWindow {
         optionFiveButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                System.out.println("test");
+                BattleCode.trial1Fight(Main.heroParty, Main.SusanoTier5);
             }
         });
 
@@ -126,7 +129,8 @@ public class GameWindow {
         panel.add(optionTwoButton);
         panel.add(optionOneButton);
         panel.add(optionThreeButton);
-
+        panel.add(optionFourButton);
+        panel.add(optionFiveButton);
 
         gameFrame.add(panel);
         panel.setVisible(true);
@@ -145,10 +149,14 @@ public class GameWindow {
         GameWindow.partyInfo.setText(GameWindow.partyInfo.getText() +  enter + "\n");
     }
 
+    public static void resetPartyLog(){
+        GameWindow.partyInfo.setText("");
+    }
+
     public String openingStory() {
         return  "Warrior of Light, how has our world been put into darkness. " +
                 "For the last Umbral period we Eorzeans have lived in constant " +
-                "of the 4 great trials of the land... Warrior of Light, you must " +
+                "fear of the great primal Susano. Warrior of Light, you must " +
                 "save us from this horror. Take your party and embark on your quest " +
                 "to liberate the land!";
     }

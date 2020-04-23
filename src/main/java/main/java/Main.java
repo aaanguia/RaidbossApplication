@@ -1,7 +1,7 @@
 package main.java;
 import contentCreation.Character.HydaelynInhabitantImpl;
 import contentCreation.Character.Character;
-import contentCreation.Villians.Tier1Villian;
+import contentCreation.Villians.*;
 import contentCreation.partyRoles.DpsDecorator;
 import contentCreation.partyRoles.HealerDecorator;
 import contentCreation.partyRoles.Party;
@@ -10,6 +10,14 @@ import gui.GameWindow;
 
 
 public class Main {
+    public static Party heroParty;
+    public static Party villianParty;
+    public static Character SusanoTier1;
+    public static Character SusanoTier2;
+    public static Character SusanoTier3;
+    public static Character SusanoTier4;
+    public static Character SusanoTier5;
+
     public static void main(String[] args) {
 
         // Creating the Party of 5 for the Trial
@@ -28,20 +36,22 @@ public class Main {
         Character Sulking = new DpsDecorator(new  HydaelynInhabitantImpl("Sulking Lance", "Hell's Gaurd Roegadyn",
                 "Eorzea", "Gridania", "Halone"));
 
-        Party heroParty = new Party(WarriorOfLight, Yshtola, Mintella, Luna, Sulking);
+        heroParty = new Party(WarriorOfLight, Yshtola, Mintella, Luna, Sulking);
 
 
         // Clone Bosses (5 Different Phases of the same boss that will get stronger each time / different moves)
-        HydaelynInhabitantImpl Susano = new HydaelynInhabitantImpl("Susano", "Primal",
-                "Othard", "Hingashi", "Ancient Kojin");
+        SusanoTier1 = new Tier1Villian( new HydaelynInhabitantImpl("Susano V1", "Primal",
+                "Othard", "Hingashi", "Ancient Kojin"));
+        SusanoTier2 = new Tier2Villian( new HydaelynInhabitantImpl("Susano V2", "Primal",
+                "Othard", "Hingashi", "Ancient Kojin"));
+        SusanoTier3 = new Tier3Villian(   new HydaelynInhabitantImpl("Susano V3", "Primal",
+                "Othard", "Hingashi", "Ancient Kojin"));
+        SusanoTier4 = new Tier4Villian(  new HydaelynInhabitantImpl("Susano V4", "Primal",
+                "Othard", "Hingashi", "Ancient Kojin"));
+        SusanoTier5 = new Tier5Villian( new HydaelynInhabitantImpl("Susano V5", "Primal",
+                "Othard", "Hingashi", "Ancient Kojin"));
 
-        Character SusanoTier1 = new Tier1Villian(Susano);
-        Character SusanoTier2 = new Tier1Villian(Susano);
-        Character SusanoTier3 = new Tier1Villian(Susano);
-        Character SusanoTier4 = new Tier1Villian(Susano);
-        Character SusanoTier5 = new Tier1Villian(Susano);
-
-        Party villianParty = new Party(SusanoTier1, SusanoTier2, SusanoTier3, SusanoTier4, SusanoTier5);
+        villianParty = new Party(SusanoTier1, SusanoTier2, SusanoTier3, SusanoTier4, SusanoTier5);
 
         /**
          *         implement random timer that may result in an attack
@@ -56,7 +66,6 @@ public class Main {
         test.appendToPartyLog(Luna);
         test.appendToPartyLog(Sulking);
         test.appendToPartyLog(Yshtola);
-        test.setGameLog(SusanoTier1.toString());
 
 
     }

@@ -11,14 +11,17 @@ public class DpsDecorator extends CharacterDecorator {
         super.setHealthPoints(40);
     }
 
-    public int dashAttack(){
+    @Override
+    public int ability1(){
         return 10 + (int) (.75*getCurrentLvl()+1);
     }
 
-    public int strongAttack(){
-        return 15;
+    @Override
+    public int ability2(){
+        return 8;
     }
 
+    @Override
     public void rest(){
         setHealthPoints(getHealthPoints()+8);
     }

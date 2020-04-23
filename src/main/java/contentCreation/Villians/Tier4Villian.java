@@ -8,7 +8,7 @@ public class Tier4Villian extends CharacterDecorator {
 
     public Tier4Villian(Character character) {
         super(character);
-        super.setHealthPoints(175);
+        super.setHealthPoints(1500);
         teirLvL = 4;
     }
 
@@ -19,11 +19,12 @@ public class Tier4Villian extends CharacterDecorator {
     /**
      * will do return amount of 35 over all party members
      */
-    public int teamAttack(){
-        return 41;
+    @Override
+    public int ability1() {
+        return -65;
     }
-
-    public int singleAttack(){
-        return 15 + (int)(.25*(getCurrentLvl()+getTeirLvL()) + 0.25 );
+    @Override
+    public int ability2() {
+        return -15 - (int) (.25 * (getCurrentLvl() + getTeirLvL()));
     }
 }

@@ -81,4 +81,18 @@ public abstract class CharacterDecorator implements Character{
     public void setCurrentLvl() {
         character.setCurrentLvl();
     }
+
+    @Override
+    public int ability1() {
+        return 0;
+    }
+
+    @Override
+    public int ability2() {
+        return 0;
+    }
+
+    @Override
+    public void rest() {
+    }
 }

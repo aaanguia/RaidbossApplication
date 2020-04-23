@@ -16,4 +16,7 @@ public interface Character {
     boolean isAlive();
     void setAlive(boolean alive);
     void setCurrentLvl();
+    int ability1();
+    int ability2();
+    void rest();
 }
