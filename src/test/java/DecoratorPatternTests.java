@@ -25,14 +25,14 @@ public class DecoratorPatternTests {
     public void decorateHealer() {
         Character test = new HealerDecorator(new HydaelynInhabitantImpl("Azumi Aki",
                 "High Elf", "Eorzea", "Limsa Lominsa", "Azeyma"));
-        assertEquals(test.ability1(), 8 );
+        assertEquals(test.ability1(),  11 );
     }
 
     @Test
     public void DpsDecorator() {
         Character test = new DpsDecorator(new HydaelynInhabitantImpl("Azumi Aki",
                 "High Elf", "Eorzea", "Limsa Lominsa", "Azeyma"));
-        assertEquals(test.ability1(), 11 );
+        assertEquals(test.ability1(), 16 );
     }
 
 
