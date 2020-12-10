@@ -1,4 +1,4 @@
-# DesignPatternSuperHeroUniverse
+# Raid Boss Emulator Utilizing Design Patterns
 
 I want to do a re-enactment of a popular games series I played when I was a kid:
 Final Fantasy. The theme of the story will follow around three characters (heros).
